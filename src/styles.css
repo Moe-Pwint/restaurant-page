@@ -1,0 +1,32 @@
+body {
+    background-color: rgb(4, 98, 75);
+  }
+
+@font-face {
+  font-family:'SemiFlora';
+  src:url('./Semiflora.woff2') format('woff2'),
+    url('./Semiflora.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-00FE;
+}
+@font-face {
+  font-family:'TimesSS';
+  src:url('./Times Sans Serif.woff2') format('woff2'),
+  url('./Times Sans Serif.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-02DC;
+}
+h1 {
+  color: rgb(69, 81, 255);
+  font-family: 'TimesSS',Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 200px;
+}
+
+h2 {
+  color: white;
+  font-family: 'SemiFlora';
+}
