@@ -1,32 +1,169 @@
-body {
-    background-color: rgb(4, 98, 75);
-  }
-
-@font-face {
-  font-family:'SemiFlora';
-  src:url('./Semiflora.woff2') format('woff2'),
-    url('./Semiflora.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-    font-stretch: normal;
-    unicode-range: U+0020-00FE;
-}
 @font-face {
   font-family:'TimesSS';
-  src:url('./Times Sans Serif.woff2') format('woff2'),
-  url('./Times Sans Serif.woff') format('woff');
+  src:url('./fonts/Times Sans Serif.woff2') format('woff2'),
+  url('./fonts/Times Sans Serif.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
   unicode-range: U+0020-02DC;
 }
-h1 {
-  color: rgb(69, 81, 255);
-  font-family: 'TimesSS',Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 200px;
+
+* {
+  font-family: 'TimesSS';
 }
 
-h2 {
-  color: white;
-  font-family: 'SemiFlora';
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--paper);
+  }
+
+  :root {
+    /* --dark-green: rgb(4, 98, 75); */
+    /* --light-green: rgb(34, 164, 132); */
+    /* --dark-yellow: rgb(212, 166, 15); */
+    --paper:#f6eee3;
+    --dark-blue:#2b8998;
+    --teeny-greeny: #c5e3e0;
+    --blue-greeny:  #5cbdb9;
+    --dark-greeny: #48a7a4;
+    --pinky: #db8597;
+  }
+
+
+
+button {
+  background-color: transparent;
+  border: none;
+  appearance: none;
+  font:inherit;
+  font-size: 25px;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+  white-space: pre-line;
+}
+
+#logo {
+  position:absolute;
+  width: 50px;
+  height: 50px;
+  left: 150px;
+  top: 20px;
+  fill: var(--blue-greeny);
+  stroke: var(--blue-greeny);
+}
+
+#phBtn {
+  position:absolute;
+  width: 220px;
+  height: 50px;
+  right: 150px;
+  top: 20px;
+  background-color:white;
+  color: var(--dark-blue);
+  border: 1px solid  var(--blue-greeny);
+  border-radius: 30px;
+  /* outline:  var(--dark-greeny); */
+}
+
+nav {
+  position: relative;
+  display: flex;
+  width:85vw;
+  margin:auto;
+  justify-content: center;
+  padding:30px;
+  border-bottom: 1px solid var(--teeny-greeny);
+  .navButtons {
+    width:200px;
+    color: var(--dark-blue);
+  }
+}
+
+h1 {
+  color:  var(--pinky);
+  font-size: 70px;
+  text-align: center;
+}
+
+#heroContainer {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: 1fr;
+  gap:40px;
+  grid-template-columns: repeat(2,1fr);
+  border-bottom: 1px solid var(--dark-greeny);
+  padding-top:20px;
+  padding-bottom: 60px;
+}
+
+#heroImg {
+  clip-path: polygon(0% 0%, 85% 0%,100% 15%, 100% 100%, 15% 100%, 0% 85%);
+  max-width: 600px;
+  justify-self: end;
+  align-self: center;
+}
+
+#heroText {
+  text-align: center;
+  font-size: 35px;
+  line-height: 1.7;
+  width:600px;
+  color:var(--dark-greeny);
+}
+
+
+#locationContainer {
+  
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: 60px 1fr 60px 1fr;
+  column-gap:40px;
+  grid-template-columns: 0.8fr 1fr;
+  /* border-bottom: 1px solid var(--dark-greeny); */
+  padding-top:100px;
+  padding-bottom: 80px;
+  
+  
+}
+
+#locationImg {
+  max-width: 800px;
+  grid-row: 1 /span 4;
+  clip-path: polygon(0% 20%, 10% 0%,100% 0%,100% 80%,90% 100%,0% 100%);
+}
+#locationTitle, #hoursTitle {
+  width: 500px;
+  justify-self: end;
+  color: var(--pinky);
+  font-size: 30px;
+}
+#locationText, #hoursText{
+  font-size: 25px;
+  width: 500px;
+  justify-self: end;
+  align-content: start;
+  color: var(--dark-blue);
+  line-height: 1;
+}
+
+
+#footer {
+  display:flex;
+  height:60px;
+  border-top: 1px solid var(--teeny-greeny);
+  width:85vw; 
+  align-items:center;
+  color:black;
+  margin:auto;
+}
+
+#copyright {
+  margin-right: auto;
+}
+#copyright, #myInfo {
+  color: rgb(92, 92, 92);
+  font-size:20px;
 }

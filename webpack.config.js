@@ -12,7 +12,11 @@ module.exports = {
   },
   devtool: "eval-source-map",
   devServer: {
+    static: path.resolve(__dirname, "dist"),
       watchFiles: ["./src/template.html"],
+      open: true, // Open the browser automatically
+      hot: true, // Enable Hot Module Replacement (HMR)
+      port: 8080, // Use this port for your dev server (default: 8080)
   },
   plugins: [
     new HtmlWebpackPlugin({
