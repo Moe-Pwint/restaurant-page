@@ -13,6 +13,7 @@ function menuLoad () {
 
     //body
     const content = document.querySelector('#content');
+    content.innerHTML = '';
 
             //hero section
     const heroTitle = document.createElement('h1');

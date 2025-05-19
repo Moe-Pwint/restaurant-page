@@ -49,6 +49,7 @@ function pageLoad () {
 
     //body
     const content = document.querySelector('#content');
+    content.innerHTML = '';
 
 
             //hero section

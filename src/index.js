@@ -40,7 +40,7 @@ function startPage() {
 
     //body section loading
     const navButtons = document.querySelectorAll('.navButtons');
-    let section;
+    let section = pageLoad();
     for (let btn=0; btn<3;btn++) {
         navButtons[btn].addEventListener('click',()=> {
             if (btn == 0) {
@@ -53,9 +53,7 @@ function startPage() {
         });
     }
 
-    //footer
-    const footer = document.createElement('div');
-    footer.setAttribute('id','footer');
+    const footer = document.querySelector('footer');
 
     const copyright = document.createElement('p');
     copyright.textContent = '© 2025 Willow & Rye. All rights reserved';
@@ -67,41 +65,6 @@ function startPage() {
     myInfo.setAttribute('id','myInfo');
     footer.appendChild(myInfo);
 
-    content.appendChild(footer);
 }
 
 startPage();
-// for (const btn of navButtons) {
-//     if (btn == home) {
-//         btn.addEventListener('click',()=> {
-//             currentSection = pageLoad();
-//             console.log('pageLoad works')});
-//     } else if (btn == menu) {
-//         btn.addEventListener('click',()=> {
-//             currentSection = menuLoad();
-//             console.log('menuLoad works')});
-//     } else if (btn == contact) {
-//         btn.addEventListener('click',()=> {
-//             currentSection = contactLoad();
-//             console.log('contactLoad works')});
-//     }
-// }
-
-// for (let btn of navButtons) {
-//     btn.addEventListener('click',()=> {
-//         if (btn.getAttribute('#home')) {
-//             currentSection = pageLoad();
-//             console.log('works');
-//         }
-//         else if (btn.getAttribute('#menu')) {
-//             currentSection = menuLoad();
-//             console.log('works');
-//         }
-//         else if(btn.getAttribute('#contact')) {
-//             currentSection = contactLoad();
-//         }
-//     })
-// }
-// }
-
-
