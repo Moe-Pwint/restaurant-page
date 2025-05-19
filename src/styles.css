@@ -32,12 +32,11 @@ body {
   }
 
 
-
 button {
-  background-color: transparent;
+  /* background-color: transparent;
   border: none;
   appearance: none;
-  font:inherit;
+  font:inherit; */
   font-size: 25px;
 }
 
@@ -54,6 +53,34 @@ h1,h2,h3,h4,h5,h6,p {
   fill: var(--blue-greeny);
   stroke: var(--blue-greeny);
 }
+
+#footer {
+  display:flex;
+  position:absolute;
+  bottom:0;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height:60px;
+  border-top: 1px solid var(--teeny-greeny);
+  width:85vw; 
+  align-items:center;
+  color:black;
+  margin:auto;
+}
+
+/* /////////////////////////  End of Base SETUP  /////////////////////////////// */
+
+
+#copyright {
+  margin-right: auto;
+}
+#copyright, #myInfo {
+  color: rgb(92, 92, 92);
+  font-size:20px;
+}
+
+
 
 #phBtn {
   position:absolute;
@@ -88,7 +115,7 @@ h1 {
   text-align: center;
 }
 
-#heroContainer {
+.heroContainer {
   display: grid;
   grid-auto-flow: column;
   grid-template-rows: 1fr;
@@ -99,20 +126,22 @@ h1 {
   padding-bottom: 60px;
 }
 
-#heroImg {
+.heroImg {
   clip-path: polygon(0% 0%, 85% 0%,100% 15%, 100% 100%, 15% 100%, 0% 85%);
   max-width: 600px;
   justify-self: end;
   align-self: center;
 }
 
-#heroText {
+.heroText {
   text-align: center;
   font-size: 35px;
   line-height: 1.7;
   width:600px;
   color:var(--dark-greeny);
 }
+
+/* /////////////////////////  End of Hero Section  /////////////////////////////// */
 
 
 #locationContainer {
@@ -150,20 +179,6 @@ h1 {
 }
 
 
-#footer {
-  display:flex;
-  height:60px;
-  border-top: 1px solid var(--teeny-greeny);
-  width:85vw; 
-  align-items:center;
-  color:black;
-  margin:auto;
-}
+/* /////////////////////////  End of initial.js module  /////////////////////////////// */
 
-#copyright {
-  margin-right: auto;
-}
-#copyright, #myInfo {
-  color: rgb(92, 92, 92);
-  font-size:20px;
-}
+
