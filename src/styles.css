@@ -183,3 +183,43 @@ h1 {
 /* /////////////////////////  End of initial.js module  /////////////////////////////// */
 
 
+#menuSection {
+  padding-top:70px;
+  padding-left:400px;
+  padding-bottom:70px;
+  /* background-color: var(--dark-blue); */
+  color:var(--dark-blue);
+}
+
+.menuTitles {
+  border-bottom: 1px solid var(--pinky);
+  margin-bottom:40px;
+  font-size: 50px;
+  width:650px;
+  text-align: center;
+  color:var(--pinky);
+}
+
+#menuContainer {
+  display:flex;
+  margin-bottom: 180px;
+}
+
+.menuImages {
+  height:200px;
+  align-self: center;
+  margin-left: 200px;
+}
+
+.menuItems {
+  width: 600px;
+  text-align: left;
+  font-size:30px;
+  line-height: 1.2;
+}
+
+.menuPrices {
+  text-align: right;
+  font-size:30px;
+  line-height: 1.2;
+}
