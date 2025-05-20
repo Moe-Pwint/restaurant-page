@@ -21,6 +21,12 @@ function startPage() {
     header.appendChild(logo);
     logo.setAttribute('id','logo');
 
+    const logoName = document.createElement('p');
+    logoName.textContent = 'Willow & Rye';
+    logoName.setAttribute('id','logoName');
+    header.appendChild(logoName);
+
+
     const phBtn = document.createElement('button');
     phBtn.setAttribute('id','phBtn');
     header.appendChild(phBtn);
@@ -41,6 +47,7 @@ function startPage() {
     //body section loading
     const navButtons = document.querySelectorAll('.navButtons');
     let section = pageLoad();
+    navButtons[0].classList.add('active');
     for (let btn=0; btn<3;btn++) {
         navButtons[btn].addEventListener('click',()=> {
             if (btn == 0) {
@@ -50,8 +57,19 @@ function startPage() {
             } else if(btn == 2) {
                 section = contactLoad();
             }
+            for (const button of navButtons) {
+                if (button !== navButtons[btn]) {
+                    if (button.classList.contains('active')) {
+                        button.classList.remove('active');
+                    }
+                } else {
+                    button.classList.add('active');
+                }
+            }
         });
     }
+
+
 
     const footer = document.querySelector('footer');
 

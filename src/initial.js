@@ -77,26 +77,26 @@ function pageLoad () {
 
     const locationTitle = document.createElement('p');
     locationTitle.textContent = `Our location:`;
-    locationTitle.setAttribute('id','locationTitle');
+    locationTitle.setAttribute('class','bodyTitle');
     locationContainer.appendChild(locationTitle);
 
     const locationText = document.createElement('p');
     locationText.textContent = `Willow & Rye Bakery\n
                             412 Maplewood Avenue, Suite A\n
                             Willow Glen, CA 95032`;
-    locationText.setAttribute('id','locationText');
+    locationText.setAttribute('class','bodyText');
     locationContainer.appendChild(locationText);
 
 
     const hoursTitle = document.createElement('p');
     hoursTitle.textContent = `Opening hours:`;
-    hoursTitle.setAttribute('id','hoursTitle');
+    hoursTitle.setAttribute('class','bodyTitle');
     locationContainer.appendChild(hoursTitle);
 
     const hoursText = document.createElement('p');
     hoursText.textContent = `Monday to Friday: 7:00 AM – 8:00 PM\n
                             Saturday & Sunday: 7:00 AM – 6:00 PM`;
-    hoursText.setAttribute('id','hoursText');
+    hoursText.setAttribute('class','bodyText');
     locationContainer.appendChild(hoursText);
 
     locationImg.setAttribute('id','locationImg');

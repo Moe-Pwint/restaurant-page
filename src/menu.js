@@ -240,10 +240,5 @@ function menuLoad () {
         //End of Pastries
 
     
-
-
-
-    content.appendChild(menuSection)
-    
-
+    content.appendChild(menuSection);
 };
